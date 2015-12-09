@@ -6,7 +6,29 @@
         xmlns:local="clr-namespace:EightBall"
         mc:Ignorable="d"
         Title="Eight Ball Answer" Height="328" Width="412">
-    <Grid>
+    <Grid Name="grid1">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <TextBox VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
+                 Margin="10,10,13,10" Name="txtQuestion"
+                 TextWrapping="Wrap" FontFamily="Verdana" FontSize="24"
+                 Grid.Row="0">
+            [Place question here.]
+        </TextBox>
+        <Button VerticalAlignment="Top" HorizontalAlignment="Left"
+                Margin="10,0,0,20" Width="127" Height="23" Name="cmdAnswer"
+                Click="cmdAnswer_Click"  Grid.Row="1">
+            Ask the Eight Ball
+        </Button>
+        <TextBox VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
+                 Margin="10,10,13,10" Name="txtAnswer" TextWrapping="Wrap"
+                 IsReadOnly="True" FontFamily="Verdana" FontSize="24" Foreground="Green"
+                 Grid.Row="2">
+            [Answer will appear here.]
+        </TextBox>
         
     </Grid>
 </Window>

@@ -24,5 +24,10 @@ namespace EightBall
         {
             InitializeComponent();
         }
+
+        private void cmdAnswer_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
