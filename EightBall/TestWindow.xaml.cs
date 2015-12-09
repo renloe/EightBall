@@ -10,25 +10,24 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace EightBall
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for TestWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class TestWindow : Window
     {
-        public MainWindow()
+        public TestWindow()
         {
             InitializeComponent();
         }
 
-        private void cmdAnswer_Click(object sender, RoutedEventArgs e)
+        private void cmdShowTextBoxData(object sender, RoutedEventArgs e)
         {
-            TestWindow testWindow = new TestWindow();
-            testWindow.Show();
+            MessageBox.Show(string.Format("{0} {1} {2}",
+                txt1.Text, txt2.Text, txt3.Text));
         }
     }
 }
